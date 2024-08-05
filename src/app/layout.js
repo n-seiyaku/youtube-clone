@@ -6,6 +6,8 @@ import { PiDotsThreeVerticalBold, PiMicrophoneFill } from 'react-icons/pi'
 import { FiSearch } from 'react-icons/fi'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import NavBar from './ui/navbar'
+import { SideNav } from './ui/sidenav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,50 +20,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex justify-between w-full px-4 h-14">
-          <div className="flex items-center">
-            <div className="mr-4 rounded-full hover:cursor-pointer hover:bg-secondary">
-              <button className="p-2">
-                <FaBars size={24} />
-              </button>
-            </div>
-            <Link href="/" className="flex items-center">
-              <FaYoutube size={30} className="text-logo" />
-              <span className="ml-1">YouTube</span>
-            </Link>
+        <NavBar />
+        <div className="flex">
+          <div className="flex-none w-60">
+            <SideNav />
           </div>
-          <div className="flex items-center">
-            <form className="flex items-center">
-              <input
-                className="pl-4 w-[33.5rem] h-10 rounded-l-[2.5rem] bg-primary border border-secondary focus:outline-none focus:border-[#1c62b9]"
-                type="text"
-                placeholder="Tìm kiếm"
-              ></input>
-              <button
-                className="w-16 h-10 rounded-r-[2.5rem] flex items-center bg-tertiary justify-center border border-l-0 border-secondary"
-                type="submit"
-              >
-                <FiSearch size={22} />
-              </button>
-            </form>
-            <div className="flex items-center justify-center w-10 h-10 ml-3 rounded-full bg-tertiary hover:bg-secondary">
-              <button className="p-2">
-                <PiMicrophoneFill size={18} />
-              </button>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="flex items-center w-10 h-10 ml-3 mr-2 rounded-full hover:bg-secondary">
-              <button className="p-2">
-                <PiDotsThreeVerticalBold size={24} />
-              </button>
-            </div>
-            <div className="flex justify-center items-center w-[7rem] h-10 rounded-[1.25rem] border border-secondary hover:bg-[#263850]">
-              <Link href="/" className="p-2">
-                Đăng nhập
-              </Link>
-            </div>
-          </div>
+          <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
         </div>
       </body>
     </html>
