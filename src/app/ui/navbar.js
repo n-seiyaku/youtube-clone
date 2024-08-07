@@ -1,12 +1,9 @@
 'use server'
 
-import { FaBars, FaYoutube } from 'react-icons/fa6'
-import { PiDotsThreeVerticalBold, PiMicrophoneFill } from 'react-icons/pi'
 import { Microphone, ThreeBars, ThreeDots, UserIcon, YoutubeLogo } from './icons'
 
 import Link from 'next/link'
 import SearchForm from '@/app/ui/results/SearchForm'
-import { SideNav } from '@/app/ui/sidenav'
 
 const NavBar = async () => {
   return (
@@ -35,12 +32,12 @@ const NavBar = async () => {
             <ThreeDots />
           </button>
         </div>
-        <div className="flex justify-center items-center w-[7rem] h-10 rounded-[1.25rem] border border-secondary hover:bg-[#263850]">
-          <Link href="/" className="flex p-2">
-            <i>
+        <div className="flex justify-center items-center h-9 rounded-[1.25rem] border border-secondary hover:bg-[#263850]">
+          <Link href="/" className="flex items-center px-3 text-btn-blue">
+            <div className="mr-[0.375rem]">
               <UserIcon />
-            </i>
-            <span>Đăng nhập</span>
+            </div>
+            <div className="text-sm">Đăng nhập</div>
           </Link>
         </div>
       </div>

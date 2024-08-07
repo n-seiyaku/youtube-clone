@@ -17,6 +17,7 @@ module.exports = {
       secondary: '#3d3d3d',
       tertiary: '#272727',
       logo: '#ffffff',
+      'btn-blue': '#3ea6ff',
       test: '#ff0000',
     },
   },
