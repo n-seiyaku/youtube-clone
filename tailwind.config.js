@@ -19,6 +19,7 @@ module.exports = {
       logo: '#ffffff',
       'btn-blue': '#3ea6ff',
       test: '#ff0000',
+      'sub-text': '#aaaaaa',
     },
   },
   plugins: [],
