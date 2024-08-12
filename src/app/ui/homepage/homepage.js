@@ -66,8 +66,6 @@ const HomepageWrapper = async () => {
 
   const homepageData = await getHomepage()
 
-  return <div>anime</div>
-
   return homepageData.map((item) => (
     <div
       key={item.videoId}

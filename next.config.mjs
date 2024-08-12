@@ -1,7 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['img.youtube.com', 'i.ytimg.com', 'yt3.ggpht.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+        port: '',
+        // pathname: '/account123/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        port: '',
+        // pathname: '/account123/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'yt3.ggpht.com',
+        port: '',
+        // pathname: '/account123/**',
+      },
+    ],
   },
 }
 

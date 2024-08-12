@@ -1,26 +1,26 @@
+import { fakeHomepagePhotoRequest, fakeHomepageRequest } from './fakeHomepageRequest'
+
 import getChannelPhoto from './getChannelPhoto'
-import getSearch from './getSearch'
 import he from 'he'
 import moment from 'moment'
 import youtubeService from './apiConfig'
 
 export const getHomepage = async () => {
   try {
-    const response = await youtubeService.search.list({
-      part: 'snippet',
-      maxResults: 50,
-      q: '',
-      type: 'video',
-      regionCode: 'VN',
-      order: 'date',
-      relevanceLanguage: 'vi',
-    })
+    // const response = await youtubeService.search.list({
+    //   part: 'snippet',
+    //   maxResults: 50,
+    //   q: '',
+    //   type: 'video',
+    //   regionCode: 'VN',
+    //   order: 'date',
+    //   relevanceLanguage: 'vi',
+    // })
+    const response = fakeHomepageRequest //fake
 
     const channelId = []
 
     const homepageData = []
-
-    console.log(response.data.items)
 
     response.data.items.map((item) => {
       const data = {
@@ -40,13 +40,14 @@ export const getHomepage = async () => {
     })
 
     const uniqueChannelId = [...new Set(channelId)]
-    const channelPhotos = await getChannelPhoto(channelId)
+    // const channelPhotos = await getChannelPhoto(channelId)
+    const channelPhotos = fakeHomepagePhotoRequest //fake
 
     homepageData.map((item) => {
       item.channelPhoto = channelPhotos[item.channelId]
     })
 
-    // return homepageData
+    return homepageData
   } catch (error) {
     console.log(error)
   }
