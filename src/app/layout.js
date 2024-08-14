@@ -2,8 +2,6 @@ import './globals.css'
 
 import NavBar from './ui/navbar'
 import { Roboto } from 'next/font/google'
-import SideNav from './ui/sidenav'
-import YouTubePlayer from './ui/results/YouTubePlayer'
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500'] })
 
@@ -17,10 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={roboto.className}>
         <NavBar />
-        <div className="flex">
-          {/* <YouTubePlayer /> */}
-          {children}
-        </div>
+        <div className="flex">{children}</div>
       </body>
     </html>
   )

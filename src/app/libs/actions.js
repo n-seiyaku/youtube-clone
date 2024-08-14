@@ -3,7 +3,7 @@
 import { redirect } from 'next/navigation'
 import youtubeService from '@/api/apiConfig'
 
-export const handleSubmit = async (formData) => {
+const handleSubmit = async (formData) => {
   const searchQuery = formData.get('search-query')
   // const response = await youtubeService.search.list({
   //   part: 'snippet',
@@ -15,3 +15,5 @@ export const handleSubmit = async (formData) => {
 
   redirect('/results?search_query=' + searchQuery)
 }
+
+export { handleSubmit }

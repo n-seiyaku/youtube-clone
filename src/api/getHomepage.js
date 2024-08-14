@@ -5,7 +5,7 @@ import he from 'he'
 import moment from 'moment'
 import youtubeService from './apiConfig'
 
-export const getHomepage = async () => {
+const getHomepage = async () => {
   try {
     // const response = await youtubeService.search.list({
     //   part: 'snippet',
@@ -27,7 +27,6 @@ export const getHomepage = async () => {
         videoId: item.id.videoId,
         channelId: item.snippet.channelId,
         thumbnail: `https://i.ytimg.com/vi/${item.id.videoId}/mqdefault.jpg`,
-        // srcSet: `https://i.ytimg.com/vi/${item.id.videoId}/hqdefault.jpg`,
         title: he.decode(item.snippet.title),
         channelPhoto: '',
         channelName: item.snippet.channelTitle,
@@ -52,3 +51,5 @@ export const getHomepage = async () => {
     console.log(error)
   }
 }
+
+export { getHomepage }

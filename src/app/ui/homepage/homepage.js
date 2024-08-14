@@ -4,16 +4,7 @@ import Link from 'next/link'
 import { Suspense } from 'react'
 import { getHomepage } from '@/api/getHomepage'
 
-export const HomepageItem = ({
-  videoId,
-  channelId,
-  thumbnail,
-  title,
-  channelPhoto,
-  channelName,
-  view,
-  relativeTime,
-}) => {
+const HomepageItem = ({ videoId, channelId, thumbnail, title, channelPhoto, channelName, view, relativeTime }) => {
   return (
     // chua hoan thanh phan Link cho toan bo the div
     <>
@@ -87,4 +78,5 @@ const HomepageWrapper = async () => {
   ))
 }
 
+export { HomepageItem }
 export default HomepageWrapper

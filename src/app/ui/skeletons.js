@@ -1,3 +1,5 @@
-export const ItemsSkeleton = () => {
+const ItemsSkeleton = () => {
   return <div>loading ...</div>
 }
+
+export { ItemsSkeleton }

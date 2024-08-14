@@ -4,6 +4,7 @@ import { Microphone, ThreeBars, ThreeDots, UserIcon, YoutubeLogo } from './icons
 
 import Link from 'next/link'
 import SearchForm from '@/app/ui/results/SearchForm'
+import SearchInput from './results/Input'
 
 const NavBar = async () => {
   return (
@@ -19,7 +20,9 @@ const NavBar = async () => {
         </Link>
       </div>
       <div className="flex items-center">
-        <SearchForm />
+        <SearchForm>
+          <SearchInput />
+        </SearchForm>
         <div className="flex items-center justify-center w-10 h-10 ml-3 rounded-full bg-tertiary hover:bg-secondary">
           <button className="p-2">
             <Microphone />
