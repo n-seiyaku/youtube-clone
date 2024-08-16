@@ -1802,4 +1802,32 @@ const fakeHomepagePhotoRequest = {
     'https://yt3.ggpht.com/OOcY3xIEnY_8gyFnxXbNO2EKkgo_DnAnglasLX0VtY6DvAc_R5M-odD6ZyUywcyGEse7s_hGgw=s240-c-k-c0x00ffffff-no-rj',
 }
 
-export { fakeHomepageRequest, fakeHomepagePhotoRequest }
+const fakeChannelUrl = {
+  UCMxFjXN6nfEv8A3joO0b4JA: '@its_khirachanz',
+  UC9NmyXOnKmUZA5nGILHox8w: '@alsyaa_offcial',
+  UCElvFH_7AnpKddz7W89zNgg: '@gchhotelgroup',
+  UCenMe27zu5vBkUnQPyCsjJg: '@chotusarpanch',
+  UCc2rmjQdos552Om9lJGTlIQ: '@aku_siapa_yak2',
+  UCQ3n4zc5q7yKr4PztlOU2lg: '@south46vlog',
+  UCj2l3n_n5v2RPgDaMyekRAw: '@kasutee_rande',
+  'UCatKTsjNl-9bukC_BHMFK4w': '@gch-xj7ob',
+  UCl3zT6EkP7p4rrFo5xHC4Ag: '@yuki_13549',
+  UCAIKOq7mVLTrWXst9Fdhjdw: '@memetc1905',
+  'UCQWU0RZBqM6GqF-rtv1_7mA': '@gamingcardshun',
+  UCOvu_XgzASRa0ntQhTFA0rg: '@gamecuchay',
+  UCMJe7ujjUMCqu3Y__rRwG6w: '@gch-insights',
+  UCoakqm6OGfyfqzRDF25mLnA: '@xits_rizuky-16x',
+  'UCgkJ8YrNnFDZwxUPXUP-RJA': '@angelia-l0vy',
+  UC712iE7H9e6xho4pzMH8auw: '@itsveeranshu4369',
+  UCxTh9KIIpRyYjdaJOPOurcA: '@elgruman',
+  UCcpOGZgb54_q_fTsrVM8uJw: '@star_blue121',
+  UCet8GOctHCSRMHX3O9v6R6g: '@arina_rina-hijrah',
+  UCHsLyals8viMAmA6D3N6IIg: '@vehlijanta719',
+  'UCSVbRV6_teDyrV4R0k-KvwA': '@baskjw918',
+  UCTUlnno0rASxrPgXVII8fNg: '@ardeealera',
+  'UC_PAj_onxXsGeg-smAt_zfg': '@niki_gacha_tubev6k',
+  UCRf1vfEryQRWHXPXHzxb1rg: '@rajaawliyaaisyah',
+  UChtglbhpPH0Bmni5pLNU2yA: '@morgan-showcase',
+}
+
+export { fakeHomepageRequest, fakeHomepagePhotoRequest, fakeChannelUrl }

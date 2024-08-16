@@ -1,4 +1,4 @@
-export function YoutubeLogo() {
+const YoutubeLogo = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export function YoutubeLogo() {
   )
 }
 
-export function ThreeBars() {
+const ThreeBars = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ export function ThreeBars() {
   )
 }
 
-export function SearchIcon() {
+const SearchIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ export function SearchIcon() {
   )
 }
 
-export function Microphone() {
+const Microphone = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ export function Microphone() {
   )
 }
 
-export function ThreeDots() {
+const ThreeDots = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +136,7 @@ export function ThreeDots() {
   )
 }
 
-export function UserIcon() {
+const UserIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,7 @@ export function UserIcon() {
   )
 }
 
-export function HomeFilled() {
+const HomeFilled = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +183,7 @@ export function HomeFilled() {
   )
 }
 
-export function HomeOutlined() {
+const HomeOutlined = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +206,7 @@ export function HomeOutlined() {
   )
 }
 
-export function ShortsFilled() {
+const ShortsFilled = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -228,7 +228,7 @@ export function ShortsFilled() {
   )
 }
 
-export function ShortsOutlined() {
+const ShortsOutlined = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -250,7 +250,7 @@ export function ShortsOutlined() {
   )
 }
 
-export function SubscriptionsFilled() {
+const SubscriptionsFilled = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +273,7 @@ export function SubscriptionsFilled() {
   )
 }
 
-export function SubscriptionsOutlined() {
+const SubscriptionsOutlined = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -296,7 +296,7 @@ export function SubscriptionsOutlined() {
   )
 }
 
-export function YouFilled() {
+const YouFilled = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -319,7 +319,7 @@ export function YouFilled() {
   )
 }
 
-export function YouOutlined() {
+const YouOutlined = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -342,7 +342,7 @@ export function YouOutlined() {
   )
 }
 
-export function HistoryFilled() {
+const HistoryFilled = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -364,7 +364,7 @@ export function HistoryFilled() {
   )
 }
 
-export function HistoryOutlined() {
+const HistoryOutlined = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -386,4 +386,40 @@ export function HistoryOutlined() {
       </g>
     </svg>
   )
+}
+
+const Verified = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      focusable="false"
+      aria-hidden="true"
+      style="pointer-events: none; display: inherit; width: 100%; height: 100%;"
+    >
+      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z"></path>
+    </svg>
+  )
+}
+
+export {
+  YoutubeLogo,
+  ThreeBars,
+  SearchIcon,
+  Microphone,
+  ThreeDots,
+  UserIcon,
+  HomeFilled,
+  HomeOutlined,
+  ShortsFilled,
+  ShortsOutlined,
+  SubscriptionsFilled,
+  SubscriptionsOutlined,
+  YouFilled,
+  YouOutlined,
+  HistoryFilled,
+  HistoryOutlined,
+  Verified,
 }

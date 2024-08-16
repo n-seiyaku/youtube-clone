@@ -3,7 +3,7 @@
 import ReactPlayer from 'react-player/youtube'
 import { YouTubeEmbed } from '@next/third-parties/google'
 
-const Player = ({ videoId }) => {
+const YoutubePlayer = ({ videoId }) => {
   return (
     // <ReactPlayer
     //   url={`https://www.youtube.com/watch?v=${videoId}`}
@@ -21,4 +21,4 @@ const Player = ({ videoId }) => {
   )
 }
 
-export default Player
+export default YoutubePlayer

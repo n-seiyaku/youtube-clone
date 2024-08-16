@@ -1,11 +1,11 @@
-import { fakeHomepagePhotoRequest, fakeHomepageRequest } from './fakeHomepageRequest'
+import { fakeChannelUrl, fakeHomepagePhotoRequest, fakeHomepageRequest } from './fakeHomepageRequest'
 
-import getChannelPhoto from './getChannelPhoto'
+import getChannelPhotosAndCustomUrls from './getChannelPhotosAndCustomUrls'
 import he from 'he'
 import moment from 'moment'
 import youtubeService from './apiConfig'
 
-const getHomepage = async () => {
+const getHomePage = async () => {
   try {
     // const response = await youtubeService.search.list({
     //   part: 'snippet',
@@ -15,12 +15,16 @@ const getHomepage = async () => {
     //   regionCode: 'VN',
     //   order: 'date',
     //   relevanceLanguage: 'vi',
+    //   nextPageToken: nextPageToken,
     // })
     const response = fakeHomepageRequest //fake
 
     const channelId = []
 
-    const homepageData = []
+    const homePageData = {
+      data: [],
+      nextPageToken: response.data?.nextPageToken || '',
+    }
 
     response.data.items.map((item) => {
       const data = {
@@ -30,26 +34,29 @@ const getHomepage = async () => {
         title: he.decode(item.snippet.title),
         channelPhoto: '',
         channelName: item.snippet.channelTitle,
-        view: '123',
+        customUrl: '',
+        views: '123',
         relativeTime: moment(item.snippet.publishTime).fromNow(),
       }
 
       channelId.push(item.snippet.channelId)
-      homepageData.push(data)
+      homePageData.data.push(data)
     })
 
     const uniqueChannelId = [...new Set(channelId)]
-    // const channelPhotos = await getChannelPhoto(channelId)
+    // const { channelPhotos, customUrl } = await getChannelPhotosAndCustomUrls(channelId)
     const channelPhotos = fakeHomepagePhotoRequest //fake
+    const customUrl = fakeChannelUrl //fake
 
-    homepageData.map((item) => {
+    homePageData.data.map((item) => {
       item.channelPhoto = channelPhotos[item.channelId]
+      item.customUrl = customUrl[item.channelId]
     })
 
-    return homepageData
+    return homePageData
   } catch (error) {
     console.log(error)
   }
 }
 
-export { getHomepage }
+export default getHomePage

@@ -11,7 +11,7 @@ import {
   SubscriptionsOutlined,
   YouFilled,
   YouOutlined,
-} from './icons'
+} from '../../icons'
 
 import Link from 'next/link'
 import clsx from 'clsx'

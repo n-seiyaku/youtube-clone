@@ -1,7 +1,7 @@
-import { SearchIcon } from '../icons'
+import { SearchIcon } from '../../icons'
 import { handleSubmit } from '@/app/libs/actions'
 
-const SearchForm = ({ children }) => {
+const NavBarSearchForm = ({ children }) => {
   return (
     <form className="flex items-center" action={handleSubmit}>
       {children}
@@ -15,4 +15,4 @@ const SearchForm = ({ children }) => {
   )
 }
 
-export default SearchForm
+export default NavBarSearchForm

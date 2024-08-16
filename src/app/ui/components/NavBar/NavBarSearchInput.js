@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation'
 
-const SearchInput = () => {
+const NavBarSearchInput = () => {
   const searchParams = useSearchParams()
 
   return (
@@ -16,4 +16,4 @@ const SearchInput = () => {
   )
 }
 
-export default SearchInput
+export default NavBarSearchInput

@@ -1,6 +1,6 @@
 import './globals.css'
 
-import NavBar from './ui/navbar'
+import NavBar from './ui/components/NavBar/NavBar'
 import { Roboto } from 'next/font/google'
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500'] })

@@ -1,24 +1,16 @@
-'use server'
-
 import youtubeService from '@/api/apiConfig'
 
-const getChannelPhoto = async (channelIds) => {
+const getChannelPhoto = async (channelId) => {
   try {
     const response = await youtubeService.channels.list({
       part: 'snippet',
       maxResults: 20,
-      id: channelIds,
+      id: channelId,
     })
 
-    let channelPhotos = {}
+    const channelPhoto = response.data.items[0].snippet.thumbnails.default.url
 
-    response.data.items.map((item) => {
-      channelPhotos = {
-        ...channelPhotos,
-        [item.id]: item.snippet.thumbnails.medium.url,
-      }
-    })
-    return channelPhotos
+    return channelPhoto
   } catch (error) {
     console.log(error)
   }
