@@ -9,7 +9,7 @@ const getChannelPhotosAndCustomUrls = async (channelIds) => {
     })
 
     let channelPhotos = {}
-    let customUrl = {}
+    let customUrls = {}
 
     response.data.items.map((item) => {
       channelPhotos = {
@@ -17,13 +17,13 @@ const getChannelPhotosAndCustomUrls = async (channelIds) => {
         [item.id]: item.snippet.thumbnails.medium.url,
       }
 
-      customUrl = {
-        ...customUrl,
+      customUrls = {
+        ...customUrls,
         [item.id]: item.snippet.customUrl,
       }
     })
 
-    return { channelPhotos, customUrl }
+    return { channelPhotos, customUrls }
   } catch (error) {
     console.log(error)
   }

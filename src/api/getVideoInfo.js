@@ -1,4 +1,5 @@
-import moment from 'moment'
+import formatDate from '@/app/utils/formatDate'
+import formatView from '@/app/utils/formatView'
 import youtubeService from './apiConfig'
 
 const getVideoInfo = async (videoId) => {
@@ -16,8 +17,8 @@ const getVideoInfo = async (videoId) => {
       title: snippet.title,
       channelName: snippet.channelTitle,
       viewCount: statistics.viewCount,
-      likeCount: statistics.likeCount,
-      relativeTime: moment(snippet.publishedAt).fromNow(),
+      likeCount: formatView(statistics.likeCount),
+      publishedAt: snippet.publishedAt,
       description: snippet.description,
       commentCount: statistics.commentCount,
     }

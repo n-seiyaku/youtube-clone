@@ -44,13 +44,13 @@ const getHomePage = async () => {
     })
 
     const uniqueChannelId = [...new Set(channelId)]
-    // const { channelPhotos, customUrl } = await getChannelPhotosAndCustomUrls(channelId)
+    // const { channelPhotos, customUrls } = await getChannelPhotosAndCustomUrls(channelId)
     const channelPhotos = fakeHomepagePhotoRequest //fake
-    const customUrl = fakeChannelUrl //fake
+    const customUrls = fakeChannelUrl //fake
 
     homePageData.data.map((item) => {
       item.channelPhoto = channelPhotos[item.channelId]
-      item.customUrl = customUrl[item.channelId]
+      item.customUrl = customUrls[item.channelId]
     })
 
     return homePageData
