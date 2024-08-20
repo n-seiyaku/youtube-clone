@@ -1,6 +1,7 @@
 'use server'
 
 import { redirect } from 'next/navigation'
+import { revalidatePath } from 'next/cache'
 import youtubeService from '@/api/apiConfig'
 
 const handleSubmit = async (formData) => {
@@ -11,9 +12,14 @@ const handleSubmit = async (formData) => {
   //   q: searchQuery,
   // })
 
+  console.log(searchQuery)
+  if (!searchQuery || searchQuery.trim() === '') {
+    return
+  }
+
   // const searchResults = response.data.items
 
-  redirect('/results?search_query=' + searchQuery)
+  redirect('/results?search_query=' + encodeURIComponent(searchQuery))
 }
 
 export { handleSubmit }

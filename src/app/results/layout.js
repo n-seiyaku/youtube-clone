@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
       <div className="flex-none w-60">
         <SideNav />
       </div>
-      <div className="w-full pt-6">
+      <div className="w-full pt-2">
         <section className="flex flex-wrap">{children}</section>
       </div>
     </>

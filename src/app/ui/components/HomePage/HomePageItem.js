@@ -18,10 +18,7 @@ const HomePageItem = ({
   const router = useRouter()
 
   const handleClickOnItem = (e) => {
-    console.log(e.target.tagName === 'A')
-
     if (e.target.tagName !== 'A' && e.target.tagName !== 'IMG') {
-      console.log(e.target.tagName)
       router.push(`/watch?v=${videoId}`)
     }
   }

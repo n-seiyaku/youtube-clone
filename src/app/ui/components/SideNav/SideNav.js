@@ -28,7 +28,7 @@ const list1 = [
   },
   {
     label: 'Shorts',
-    href: '/results',
+    href: '/shorts',
     icons: {
       filled: <ShortsFilled />,
       outline: <ShortsOutlined />,
@@ -36,7 +36,7 @@ const list1 = [
   },
   {
     label: 'Subscriptions',
-    href: '/results',
+    href: '/feed/subscriptions',
     icons: {
       filled: <SubscriptionsFilled />,
       outline: <SubscriptionsOutlined />,
@@ -47,7 +47,7 @@ const list1 = [
 const list2 = [
   {
     label: 'You',
-    href: '/results',
+    href: '/@you',
     icons: {
       filled: <YouFilled />,
       outline: <YouOutlined />,
@@ -55,7 +55,7 @@ const list2 = [
   },
   {
     label: 'History',
-    href: '/results',
+    href: '/feed/history',
     icons: {
       filled: <HistoryFilled />,
       outline: <HistoryOutlined />,
