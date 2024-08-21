@@ -2,8 +2,8 @@ import SidebarRelatedItem from './SideBarRelatedItem'
 import formatView from '@/app/utils/formatView'
 import { getRelatedVideo } from '@/api/serpapiConfig'
 
-const SidebarRelatedVideos = async () => {
-  const relatedVideos = await getRelatedVideo()
+const SidebarRelatedVideos = async ({ videoId }) => {
+  const relatedVideos = await getRelatedVideo(videoId)
 
   return relatedVideos.map((item) => {
     return (

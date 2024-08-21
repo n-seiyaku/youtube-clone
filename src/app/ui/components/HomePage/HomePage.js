@@ -4,25 +4,6 @@ import { Suspense } from 'react'
 import getHomePage from '@/api/getHomePage'
 
 const HomePageWrapper = async () => {
-  // const [tokenData, setTokenData] = useState({
-  //   access_token: '',
-  //   token_type: '',
-  //   expires_in: '',
-  //   scope: '',
-  // })
-
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     const hash = window.location.hash.substring(1)
-  //     const params = new URLSearchParams(hash)
-
-  //     localStorage.setItem('access_token', params.get('access_token'))
-  //     localStorage.setItem('token_type', params.get('token_type'))
-  //     localStorage.setItem('expires_in', params.get('expires_in'))
-  //     localStorage.setItem('scope', params.get('scope'))
-  //   }
-  // }, [])
-
   const response = await getHomePage('getHomePage')
   const homePageData = response.data
 

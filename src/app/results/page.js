@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import ResultItem from '../ui/components/ResultPage/ResultItem'
 import getResultPage from '@/api/getResultPage'
 

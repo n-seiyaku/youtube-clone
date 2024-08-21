@@ -1,7 +1,7 @@
 import { DislikeIcon, LikeIcon } from '../../icons'
 
 import Image from 'next/image'
-import Link from 'next/link'
+import { ProgressBarLink } from '../ProgressBar'
 
 const TitleVideo = ({ watchPageData }) => {
   return (
@@ -11,7 +11,7 @@ const TitleVideo = ({ watchPageData }) => {
       </div>
       <div className="flex justify-between">
         <div className="flex mt-3">
-          <Link href={watchPageData.customUrl}>
+          <ProgressBarLink href={watchPageData.customUrl}>
             <div className="mr-3">
               <Image
                 className="rounded-full"
@@ -21,10 +21,10 @@ const TitleVideo = ({ watchPageData }) => {
                 height="40"
               />
             </div>
-          </Link>
+          </ProgressBarLink>
           <div className="flex flex-col mr-6 text-main-text">
             <div className="text-base font-medium leading-[1.375rem]">
-              <Link href={watchPageData.customUrl}>{watchPageData.channelName}</Link>
+              <ProgressBarLink href={watchPageData.customUrl}>{watchPageData.channelName}</ProgressBarLink>
             </div>
             <div className="text-xs font-normal text-sub-text leading-[1.125rem]">
               {watchPageData.subscriberCount} subscribers

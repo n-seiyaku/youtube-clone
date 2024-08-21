@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { ProgressBarLink } from '../ProgressBar'
 
 const SidebarRelatedItem = ({ videoId, thumbnail, title, channelName, views, relativeTime }) => {
   return (
-    <Link href={`/watch?v=${videoId}`}>
+    <ProgressBarLink href={`/watch?v=${videoId}`}>
       <div className="flex h-[5.875rem] mb-2">
         <div className="mr-2 w-[10.5rem] h-[5.875rem]">
           <Image className="rounded-lg" src={thumbnail} alt={title} width="9999" height="9999" priority={true} />
@@ -20,7 +20,7 @@ const SidebarRelatedItem = ({ videoId, thumbnail, title, channelName, views, rel
           </div>
         </div>
       </div>
-    </Link>
+    </ProgressBarLink>
   )
 }
 

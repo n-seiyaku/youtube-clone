@@ -13,7 +13,7 @@ import {
   YouOutlined,
 } from '../../icons'
 
-import Link from 'next/link'
+import { ProgressBarLink } from '../ProgressBar'
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 
@@ -28,7 +28,7 @@ const list1 = [
   },
   {
     label: 'Shorts',
-    href: '/shorts',
+    href: '/feed/shorts',
     icons: {
       filled: <ShortsFilled />,
       outline: <ShortsOutlined />,
@@ -70,7 +70,7 @@ const SideNav = () => {
     <nav className="flex flex-col w-60 text-[0.875rem] text-logo">
       <div className="p-3 after:content-[''] after:block after:w-full after:h-[1px] after:bg-secondary after:mt-3">
         {list1.map((item, index) => (
-          <Link
+          <ProgressBarLink
             href={item.href}
             key={index}
             className={clsx(
@@ -85,12 +85,12 @@ const SideNav = () => {
           >
             <div className="mr-6">{pathname === item.href ? item.icons.filled : item.icons.outline}</div>
             <div className="pt-[1px]">{item.label}</div>
-          </Link>
+          </ProgressBarLink>
         ))}
       </div>
       <div className="px-3 pb-3 after:content-[''] after:block after:w-full after:h-[1px] after:bg-secondary after:mt-3">
         {list2.map((item, index) => (
-          <Link
+          <ProgressBarLink
             href={item.href}
             key={index}
             className={clsx(
@@ -105,7 +105,7 @@ const SideNav = () => {
           >
             <div className="mr-6">{pathname === item.href ? item.icons.filled : item.icons.outline}</div>
             <div className="pt-[1px]">{item.label}</div>
-          </Link>
+          </ProgressBarLink>
         ))}
       </div>
     </nav>

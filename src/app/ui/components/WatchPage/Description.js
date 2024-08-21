@@ -1,17 +1,21 @@
 'use client'
 
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 
 import formatView from '@/app/utils/formatView'
 import moment from 'moment'
 import numberWithCommas from '@/app/utils/numberWithCommas'
 
-const Description = ({ watchPageData }) => {
+const Description = ({ watchPageData, videoId }) => {
   const [isShowMore, setIsShowMore] = useState(false)
 
   const handleShowMore = () => {
     setIsShowMore(!isShowMore)
   }
+
+  useEffect(() => {
+    setIsShowMore(false)
+  }, [videoId])
 
   const descriptions = watchPageData.description.split('\n')
   const numberOfLines = descriptions.length > 3 ? 3 : descriptions.length
