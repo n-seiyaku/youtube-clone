@@ -1,7 +1,6 @@
-'use server'
+import { Microphone, ThreeBars, YoutubeLogo } from '../../icons'
 
-import { Microphone, ThreeBars, ThreeDots, UserIcon, YoutubeLogo } from '../../icons'
-
+import NavBarLoginButton from './NavBarLoginButton'
 import NavBarSearchForm from '@/app/ui/components/NavBar/NavBarSearchForm'
 import { ProgressBarLink } from '../ProgressBar'
 
@@ -26,20 +25,8 @@ const NavBar = async () => {
           </button>
         </div>
       </div>
-      <div className="flex items-center">
-        <div className="flex items-center w-10 h-10 ml-3 mr-2 rounded-full hover:bg-secondary">
-          <button className="p-2">
-            <ThreeDots />
-          </button>
-        </div>
-        <div className="flex justify-center items-center h-9 rounded-[1.25rem] border border-secondary hover:bg-[#263850]">
-          <ProgressBarLink href="/" className="flex items-center px-3 text-btn-blue">
-            <div className="mr-[0.375rem]">
-              <UserIcon />
-            </div>
-            <div className="text-sm">Đăng nhập</div>
-          </ProgressBarLink>
-        </div>
+      <div className="relative flex items-center">
+        <NavBarLoginButton />
       </div>
     </div>
   )

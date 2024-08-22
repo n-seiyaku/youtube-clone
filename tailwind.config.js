@@ -24,6 +24,7 @@ module.exports = {
       test: '#ff0000',
       'main-text': '#f1f1f1',
       'sub-text': '#aaaaaa',
+      'sub-menu': '#282828',
     },
   },
   plugins: [],

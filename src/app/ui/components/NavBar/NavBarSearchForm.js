@@ -13,8 +13,10 @@ const NavBarSearchForm = () => {
   const [inputValue, setInputValue] = useState(currentParam || '')
 
   const handleRedirect = (e = undefined) => {
-    e.target.blur()
-    router.push(`/results?${new URLSearchParams({ search_query: inputValue.trim() })}`)
+    if (inputValue) {
+      e.target.blur()
+      router.push(`/results?${new URLSearchParams({ search_query: inputValue.trim() })}`)
+    }
   }
 
   useEffect(() => {
