@@ -19,6 +19,7 @@ module.exports = {
       logo: '#ffffff',
       'btn-blue': '#3ea6ff',
       'white-hover': '#d9d9d9',
+      'gray-hover': '#3f3f3f',
       'like-hover': '#584f4b',
       'like-btn': '#2d2c29',
       test: '#ff0000',

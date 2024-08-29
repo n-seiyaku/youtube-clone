@@ -1,7 +1,7 @@
 import formatView from '@/app/utils/formatView'
-import getChannelPhotosAndCustomUrls from './getChannelPhotosAndCustomUrls'
-import getSubcriberCount from './getSubcriberCount'
-import getVideoInfo from './getVideoInfo'
+import getChannelPhotosAndCustomUrls from '@/api/getChannelPhotosAndCustomUrls'
+import getSubcriberCount from '@/api/getSubcriberCount'
+import getVideoInfo from '@/api/getVideoInfo'
 
 const getWatchPage = async (videoId) => {
   // const videoInfo = await getVideoInfo(videoId)
@@ -17,8 +17,6 @@ const getWatchPage = async (videoId) => {
   //   customUrl: customUrls[videoInfo.channelId],
   //   subscriberCount: formatView(subscriberCount),
   // }
-
-  // UCOvu_XgzASRa0ntQhTFA0rg
 
   return {
     channelId: 'UCOvu_XgzASRa0ntQhTFA0rg',

@@ -20,38 +20,20 @@ const NavBarLoginButton = () => {
   const searchParams = useSearchParams()
 
   const oauthSignIn = () => {
-    var oauth2Endpoint = 'https://accounts.google.com/o/oauth2/v2/auth'
-
-    var form = document.createElement('form')
-    form.setAttribute('method', 'GET')
-    form.setAttribute('action', oauth2Endpoint)
-
-    var params = {
-      client_id: '943852022379-6ch51idrdt6t6uu0g02a6qvl86lt6kul.apps.googleusercontent.com',
-      redirect_uri: 'http://localhost:3000/login',
-      response_type: 'token',
-      scope: 'https://www.googleapis.com/auth/youtube',
-      include_granted_scopes: 'true',
-      state: 'pass-through value',
-    }
-
-    for (var p in params) {
-      var input = document.createElement('input')
-      input.setAttribute('type', 'hidden')
-      input.setAttribute('name', p)
-      input.setAttribute('value', params[p])
-      form.appendChild(input)
-    }
-
-    document.body.appendChild(form)
-    form.submit()
+    router.push('/api/login')
   }
 
   const signOut = () => {
     const currentPath = `${pathname}?${searchParams.toString()}`
-    setIsAuthenticated(false)
-    setAuthData({})
-    localStorage.clear()
+    fetch('/api/sign-out', { method: 'GET' })
+      .then((response) => {
+        if (response.status === 200) {
+          setIsAuthenticated(false)
+          setAuthData(undefined)
+          return response.json()
+        }
+      })
+      .catch((err) => console.log(err))
 
     progress.start()
     startTransition(() => {

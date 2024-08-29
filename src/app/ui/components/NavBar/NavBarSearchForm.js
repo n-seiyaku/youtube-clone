@@ -1,21 +1,29 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { startTransition, useEffect, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 import { SearchIcon } from '../../icons'
+import { useProgressBar } from '../ProgressBar'
 
 const NavBarSearchForm = () => {
   const path = usePathname()
   const searchParam = useSearchParams()
   const currentParam = searchParam.get('search_query')
   const router = useRouter()
+  const progress = useProgressBar()
   const [inputValue, setInputValue] = useState(currentParam || '')
 
   const handleRedirect = (e = undefined) => {
     if (inputValue) {
+      e.preventDefault()
       e.target.blur()
-      router.push(`/results?${new URLSearchParams({ search_query: inputValue.trim() })}`)
+      progress.start()
+
+      startTransition(() => {
+        router.push(`/results?${new URLSearchParams({ search_query: inputValue.trim() })}`)
+        progress.done()
+      })
     }
   }
 

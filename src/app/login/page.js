@@ -1,30 +1,36 @@
 'use client'
 
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 import { AuthContext } from '../AuthProvider'
-import getUserData from '@/api/getUserData'
 import { useRouter } from 'next/navigation'
 
-const Page = () => {
-  const router = useRouter()
+export default function LoginPage({ searchParams }) {
   const { setAuthData, setIsAuthenticated } = useContext(AuthContext)
+  const router = useRouter()
+  const [data, setData] = useState(null)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const hash = window.location.hash.substring(1)
-      const params = new URLSearchParams(hash)
-
-      localStorage.setItem('access_token', params.get('access_token'))
-      localStorage.setItem('token_type', params.get('token_type'))
-      localStorage.setItem('expires_in', params.get('expires_in'))
-      localStorage.setItem('scope', params.get('scope'))
-      getUserData(setAuthData)
-      setIsAuthenticated(true)
-      router.push('/')
+      fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          code: searchParams.code,
+          scope: searchParams.scope,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => router.push('/'))
+        .catch((err) => console.log(err))
     }
-  }, [router, setAuthData, setIsAuthenticated])
-  return
-}
+  }, [searchParams, router, setIsAuthenticated, setAuthData])
 
-export default Page
+  return (
+    <div>
+      <h1>Next.js API Route Example</h1>
+    </div>
+  )
+}

@@ -45,40 +45,6 @@ const fakeHomepageRequest = {
       },
       {
         kind: 'youtube#searchResult',
-        etag: 'kPRB8BZd78YbvjNS9am1CryGnlI',
-        id: {
-          kind: 'youtube#video',
-          videoId: 'a-4I2yFpgMo',
-        },
-        snippet: {
-          publishedAt: '2024-08-09T17:59:02Z',
-          channelId: 'UCTUlnno0rASxrPgXVII8fNg',
-          title: 'Reacting to gch cringe',
-          description: '',
-          thumbnails: {
-            default: {
-              url: 'https://i.ytimg.com/vi/a-4I2yFpgMo/default.jpg',
-              width: 120,
-              height: 90,
-            },
-            medium: {
-              url: 'https://i.ytimg.com/vi/a-4I2yFpgMo/mqdefault.jpg',
-              width: 320,
-              height: 180,
-            },
-            high: {
-              url: 'https://i.ytimg.com/vi/a-4I2yFpgMo/hqdefault.jpg',
-              width: 480,
-              height: 360,
-            },
-          },
-          channelTitle: 'It’s_LeahSecondYtChanel',
-          liveBroadcastContent: 'none',
-          publishTime: '2024-08-09T17:59:02Z',
-        },
-      },
-      {
-        kind: 'youtube#searchResult',
         etag: 'IPGvYGE8vx2svqEyZM_OIhV-roE',
         id: {
           kind: 'youtube#video',

@@ -4,7 +4,7 @@ import { Suspense } from 'react'
 import getHomePage from '@/api/getHomePage'
 
 const HomePageWrapper = async () => {
-  const response = await getHomePage('getHomePage')
+  const response = await getHomePage()
   const homePageData = response.data
 
   return homePageData.map((item) => (

@@ -1,6 +1,7 @@
 import Description from '../ui/components/WatchPage/Description'
 import SidebarRelatedVideos from '../ui/components/WatchPage/SideBarRelatedVideos'
 import TitleVideo from '../ui/components/WatchPage/TitleVideo'
+import checkIsSubcribe from '@/api/checkIsSubcribe'
 import dynamic from 'next/dynamic'
 import getWatchPage from '@/api/getWatchPage'
 
@@ -8,13 +9,14 @@ const PlayerNoSSR = dynamic(() => import('../ui/components/WatchPage/YoutubePlay
 const Page = async ({ searchParams }) => {
   const videoId = searchParams.v
   const watchPageData = await getWatchPage(videoId)
+  const isSubcribe = await checkIsSubcribe(watchPageData.channelId)
 
   return (
     <div className="flex justify-center w-full">
       <div className="w-[895.812px] pt-6 pr-6 ml-6">
         <PlayerNoSSR videoId={searchParams.v} />
 
-        <TitleVideo watchPageData={watchPageData} />
+        <TitleVideo watchPageData={watchPageData} isSubcribe={isSubcribe} />
 
         <Description watchPageData={watchPageData} videoId={searchParams.v} />
       </div>

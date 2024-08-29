@@ -3,7 +3,7 @@ import { fakeChannelUrl, fakeHomepagePhotoRequest, fakeHomepageRequest } from '.
 import getChannelPhotosAndCustomUrls from './getChannelPhotosAndCustomUrls'
 import he from 'he'
 import moment from 'moment'
-import youtubeService from './apiConfig'
+import youtubeService from '@/api/apiConfig'
 
 const getHomePage = async () => {
   try {

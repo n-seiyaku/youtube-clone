@@ -39,22 +39,24 @@ const HomePageItem = ({
         </ProgressBarLink>
       </div>
       <div className="flex mt-3" onClick={handleClickOnItem}>
-        <div className="flex mr-3 w-9 h-9">
+        <div className="mr-3 w-9 h-9 shrink-0">
           <ProgressBarLink href={`/${customUrl}`}>
             <Image className="rounded-full" src={channelPhoto} alt={channelName} width="36" height="36" priority />
           </ProgressBarLink>
         </div>
-        <div className="flex flex-col">
-          <div className="mb-1 font-medium line-clamp-2 text-ellipsis">
-            <ProgressBarLink href={`/watch?v=${videoId}`}>{title}</ProgressBarLink>
-          </div>
-          <div className="text-sm text-sub-text">
-            <ProgressBarLink href={`/${customUrl}`}>{channelName}</ProgressBarLink>
-          </div>
-          <div className="text-sm text-sub-text ">
-            <span>{views} views</span>
-            <span className="mx-1">•</span>
-            <span>{relativeTime}</span>
+        <div className="line-clamp-2 text-ellipsis grow">
+          <div className="flex flex-col">
+            <div className="mb-1 font-medium line-clamp-2 text-ellipsis">
+              <ProgressBarLink href={`/watch?v=${videoId}`}>{title}</ProgressBarLink>
+            </div>
+            <div className="text-sm text-sub-text">
+              <ProgressBarLink href={`/${customUrl}`}>{channelName}</ProgressBarLink>
+            </div>
+            <div className="text-sm text-sub-text">
+              <span>{views} views</span>
+              <span className="mx-1">•</span>
+              <span>{relativeTime}</span>
+            </div>
           </div>
         </div>
       </div>

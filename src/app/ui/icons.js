@@ -410,7 +410,41 @@ const Verified = () => {
   )
 }
 
-const LikeIcon = () => {
+const LikeFilled = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      // style={{
+      //   pointerEvents: 'none',
+      //   display: 'inherit',
+      //   width: '100%',
+      //   height: '100%',
+      // }}
+    >
+      <path
+        d="M19.1091 11.3824L14.087 11.3847L15.4118 6.37503C15.7332 5.34074 15.9361 4.01121 14.8791 4.00118C14.353 3.99616 13.8253 3.99616 13.5672 4.2579L7.23086 11.1121L7.22159 20.8891L18.0405 20.8788C19.1048 20.8788 19.4185 20.2393 19.6294 19.2955L20.9418 13.5016C21.213 12.2565 20.5249 11.3824 19.1091 11.3824Z"
+        fill="white"
+      />
+      <path
+        d="M19.1091 11.3824L14.087 11.3847L15.4118 6.37503C15.7332 5.34074 15.9361 4.01121 14.8791 4.00118C14.353 3.99616 13.8253 3.99616 13.5672 4.2579L7.23086 11.1121L7.22159 20.8891L18.0405 20.8788C19.1048 20.8788 19.4185 20.2393 19.6294 19.2955L20.9418 13.5016C21.213 12.2565 20.5249 11.3824 19.1091 11.3824Z"
+        stroke="white"
+        strokeWidth="0.386844"
+      />
+      <path d="M5.12005 11.3797L3.00002 11.3847L3.00739 20.8811L5.11079 20.8764L5.12005 11.3797Z" fill="white" />
+      <path
+        d="M5.12005 11.3797L3.00002 11.3847L3.00739 20.8811L5.11079 20.8764L5.12005 11.3797Z"
+        stroke="white"
+        strokeWidth="0.386844"
+      />
+    </svg>
+  )
+}
+
+const LikeOutlined = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -433,7 +467,30 @@ const LikeIcon = () => {
   )
 }
 
-const DislikeIcon = () => {
+const DislikeFilled = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      enable-background="new 0 0 24 24"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      focusable="false"
+      aria-hidden="true"
+      // style={{
+      //   pointerEvents: 'none',
+      //   display: 'inherit',
+      //   width: '100%',
+      //   height: '100%',
+      // }}
+      fill="currentColor"
+    >
+      <path d="M18,4h3v10h-3V4z M5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21c0.58,0,1.14-0.24,1.52-0.65L17,14V4H6.57 C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14z"></path>
+    </svg>
+  )
+}
+
+const DislikeOutlined = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -524,6 +581,28 @@ const SignOut = () => {
   )
 }
 
+const AngleDown = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      focusable="false"
+      aria-hidden="true"
+      // style={{
+      //   pointerEvents: 'none',
+      //   display: 'inherit',
+      //   width: '100%',
+      //   height: '100%',
+      // }}
+      fill="currentColor"
+    >
+      <path d="m18 9.28-6.35 6.35-6.37-6.35.72-.71 5.64 5.65 5.65-5.65z"></path>
+    </svg>
+  )
+}
+
 export {
   YoutubeLogo,
   ThreeBars,
@@ -542,9 +621,12 @@ export {
   HistoryFilled,
   HistoryOutlined,
   Verified,
-  LikeIcon,
-  DislikeIcon,
+  LikeFilled,
+  LikeOutlined,
+  DislikeFilled,
+  DislikeOutlined,
   NotificationFilled,
   NotificationOutlined,
   SignOut,
+  AngleDown,
 }

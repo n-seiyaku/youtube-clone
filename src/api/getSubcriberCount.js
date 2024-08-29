@@ -1,10 +1,10 @@
-import youtubeService from './apiConfig'
+import youtubeService from '@/api/apiConfig'
 
 const getSubcriberCount = async (channelId) => {
   try {
     const response = await youtubeService.channels.list({
       part: 'statistics',
-      id: channelId, // replace with your channel id
+      id: channelId,
     })
 
     const subscribers = response.data.items[0].statistics.subscriberCount

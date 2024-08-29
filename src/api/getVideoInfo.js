@@ -1,6 +1,6 @@
 import formatDate from '@/app/utils/formatDate'
 import formatView from '@/app/utils/formatView'
-import youtubeService from './apiConfig'
+import youtubeService from '@/api/apiConfig'
 
 const getVideoInfo = async (videoId) => {
   try {
