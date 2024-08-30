@@ -1,14 +1,18 @@
+import checkIsSubcribe from './checkIsSubcribe'
 import formatView from '@/app/utils/formatView'
 import getChannelPhotosAndCustomUrls from '@/api/getChannelPhotosAndCustomUrls'
 import getSubcriberCount from '@/api/getSubcriberCount'
+import getUserRatingType from '@/api/getUserRatingType'
 import getVideoInfo from '@/api/getVideoInfo'
 
 const getWatchPage = async (videoId) => {
   // const videoInfo = await getVideoInfo(videoId)
 
-  // const [{ channelPhotos, customUrls }, subscriberCount] = await Promise.all([
+  // const [{ channelPhotos, customUrls }, subscriberCount, isSubcribe, ratingType] = await Promise.all([
   //   getChannelPhotosAndCustomUrls(videoInfo.channelId),
   //   getSubcriberCount(videoInfo.channelId),
+  //   checkIsSubcribe(videoInfo.channelId),
+  //   getUserRatingType(videoId),
   // ])
 
   // const watchPageData = {
@@ -16,10 +20,21 @@ const getWatchPage = async (videoId) => {
   //   channelPhoto: channelPhotos[videoInfo.channelId],
   //   customUrl: customUrls[videoInfo.channelId],
   //   subscriberCount: formatView(subscriberCount),
+  //   isSubcribe,
+  //   ratingType,
+  //   videoId,
   // }
+
+  const isSubcribe = await checkIsSubcribe('UCOvu_XgzASRa0ntQhTFA0rg')
+  const ratingType = await getUserRatingType(videoId)
+
+  // SeaBflgOosY: like
+  // tzbLDH7Wa5o: none
+  // UByz2ENdywY: dislike
 
   return {
     channelId: 'UCOvu_XgzASRa0ntQhTFA0rg',
+    videoId,
     title: 'YASSUO - Từ BEST Yasuo Thành Con Nghiện ĐỎ ĐEN',
     channelName: 'Game Cực Hay',
     viewCount: '299312',
@@ -32,6 +47,8 @@ const getWatchPage = async (videoId) => {
       'https://yt3.ggpht.com/rJXoQ0wJH2ZF7K2iWjTTsTLAWhL2yZwJ0XHZfUfCQDPyCEJy06o77_Se_g9Y_T6Ju-TWXbid=s240-c-k-c0x00ffffff-no-rj',
     customUrl: '@gamecuchay',
     subscriberCount: '519K',
+    isSubcribe,
+    ratingType,
   }
 
   return watchPageData

@@ -1,13 +1,15 @@
 import { youtubeAuthService } from '@/app/api/user/route'
 
-const rateVideo = async (videoId, typeRate) => {
+const rateVideo = async (videoId, ratingType) => {
   try {
     const response = await youtubeAuthService.videos.rate({
       id: videoId,
-      rating: typeRate,
+      rating: ratingType,
     })
+
+    console.log(response.data)
   } catch (error) {
-    console.log(error)
+    console.log('rate video:', error)
   }
 }
 

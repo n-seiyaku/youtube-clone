@@ -17,8 +17,8 @@ const handleSubcribeChannel = async (channelId) => {
   await subcribeNewChannel(channelId)
 }
 
-const likeVideo = async (videoId) => {
-  await rateVideo(videoId, 'like')
+const handleRatingVideo = async (videoId, ratingType) => {
+  await rateVideo(videoId, ratingType)
 }
 
-export { handleSubmit, handleSubcribeChannel, likeVideo }
+export { handleSubmit, handleSubcribeChannel, handleRatingVideo }

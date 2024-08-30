@@ -1,6 +1,6 @@
 'use client'
 
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
 
 import { AuthContext } from '../AuthProvider'
 import { useRouter } from 'next/navigation'
@@ -8,7 +8,6 @@ import { useRouter } from 'next/navigation'
 export default function LoginPage({ searchParams }) {
   const { setAuthData, setIsAuthenticated } = useContext(AuthContext)
   const router = useRouter()
-  const [data, setData] = useState(null)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -23,8 +22,10 @@ export default function LoginPage({ searchParams }) {
         }),
       })
         .then((res) => res.json())
-        .then((data) => router.push('/'))
-        .catch((err) => console.log(err))
+        .then((data) => {
+          router.push('/')
+        })
+        .catch((err) => console.log('login page', err))
     }
   }, [searchParams, router, setIsAuthenticated, setAuthData])
 
