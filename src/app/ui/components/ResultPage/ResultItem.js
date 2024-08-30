@@ -1,6 +1,6 @@
 'use client'
 
-import { ProgressBarLink, useProgressBar } from '../ProgressBar'
+import { ProgressBarLink, useProgressBar } from '@/app/ui/components/ProgressBar'
 
 import Image from 'next/image'
 import { startTransition } from 'react'
@@ -36,7 +36,7 @@ const ResultItem = ({ data }) => {
           />
         </ProgressBarLink>
       </div>
-      <div className="w-[44.3rem] cursor-pointer" onClick={handleClickOnItem}>
+      <div className="max-w-[calc(100vw-50.25rem)] cursor-pointer" onClick={handleClickOnItem}>
         <h1 className="text-[1.125rem] font-normal text-ellipsis line-clamp-2">
           <ProgressBarLink href={`/watch?v=${data.videoId}`}>{data.title}</ProgressBarLink>
         </h1>

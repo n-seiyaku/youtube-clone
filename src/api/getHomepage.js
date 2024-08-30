@@ -1,11 +1,12 @@
-import { fakeChannelUrl, fakeHomepagePhotoRequest, fakeHomepageRequest } from './fakeHomepageRequest'
+import { fakeChannelUrl, fakeHomepagePhotoRequest, fakeHomepageRequest, fakeView } from './fakeHomepageRequest'
 
-import getChannelPhotosAndCustomUrls from './getChannelPhotosAndCustomUrls'
+import getChannelPhotosAndCustomUrls from '@/api/getChannelPhotosAndCustomUrls'
+import getVideoView from '@/api/getVideoView'
 import he from 'he'
 import moment from 'moment'
 import youtubeService from '@/api/apiConfig'
 
-const getHomePage = async () => {
+const getHomePage = async (nextPageToken = '') => {
   try {
     // const response = await youtubeService.search.list({
     //   part: 'snippet',
@@ -19,7 +20,8 @@ const getHomePage = async () => {
     // })
     const response = fakeHomepageRequest //fake
 
-    const channelId = []
+    const channelIds = []
+    const videoIds = []
 
     const homePageData = {
       data: [],
@@ -35,22 +37,25 @@ const getHomePage = async () => {
         channelPhoto: '',
         channelName: item.snippet.channelTitle,
         customUrl: '',
-        views: '123',
+        views: '',
         relativeTime: moment(item.snippet.publishTime).fromNow(),
       }
 
-      channelId.push(item.snippet.channelId)
+      videoIds.push(data.videoId)
+      channelIds.push(data.channelId)
       homePageData.data.push(data)
     })
 
-    const uniqueChannelId = [...new Set(channelId)]
-    // const { channelPhotos, customUrls } = await getChannelPhotosAndCustomUrls(channelId)
+    // const { channelPhotos, customUrls } = await getChannelPhotosAndCustomUrls(channelIds)
+    // const videoViews = await getVideoView(videoIds)
+    const videoViews = fakeView //fake
     const channelPhotos = fakeHomepagePhotoRequest //fake
     const customUrls = fakeChannelUrl //fake
 
     homePageData.data.map((item) => {
       item.channelPhoto = channelPhotos[item.channelId]
       item.customUrl = customUrls[item.channelId]
+      item.views = videoViews[item.videoId]
     })
 
     return homePageData

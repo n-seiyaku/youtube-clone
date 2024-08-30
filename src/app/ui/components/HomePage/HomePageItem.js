@@ -1,8 +1,9 @@
 'use client'
 
-import { ProgressBarLink, useProgressBar } from '../ProgressBar'
+import { ProgressBarLink, useProgressBar } from '@/app/ui/components/ProgressBar'
 
 import Image from 'next/image'
+import formatView from '@/app/utils/formatView'
 import { startTransition } from 'react'
 import { useRouter } from 'next/navigation'
 
@@ -53,7 +54,7 @@ const HomePageItem = ({
               <ProgressBarLink href={`/${customUrl}`}>{channelName}</ProgressBarLink>
             </div>
             <div className="text-sm text-sub-text">
-              <span>{views} views</span>
+              <span>{formatView(views)} views</span>
               <span className="mx-1">•</span>
               <span>{relativeTime}</span>
             </div>
