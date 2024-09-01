@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ProgressBarLink } from '../ProgressBar'
+import { ProgressBarLink } from '@/app/ui/components/ProgressBar'
 
 const SidebarRelatedItem = ({ videoId, thumbnail, title, channelName, views, relativeTime }) => {
   return (

@@ -1,4 +1,4 @@
-import ResultItem from '../ui/components/ResultPage/ResultItem'
+import ResultItem from '@/app/ui/components/ResultPage/ResultItem'
 import getResultPage from '@/api/getResultPage'
 
 const Page = async () => {

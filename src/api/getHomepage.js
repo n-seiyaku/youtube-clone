@@ -1,4 +1,4 @@
-import { fakeChannelUrl, fakeHomepagePhotoRequest, fakeHomepageRequest, fakeView } from './fakeHomepageRequest'
+import { fakeChannelUrl, fakeHomepagePhotoRequest, fakeHomepageRequest, fakeView } from '@/api/fakeHomepageRequest'
 
 import getChannelPhotosAndCustomUrls from '@/api/getChannelPhotosAndCustomUrls'
 import getVideoView from '@/api/getVideoView'

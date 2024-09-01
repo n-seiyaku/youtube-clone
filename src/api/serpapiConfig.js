@@ -1,6 +1,6 @@
 import { config, getJson, getJsonBySearchId } from 'serpapi'
 
-import { fakeRelatedVideo } from './fakeRelatedVideo'
+import { fakeRelatedVideo } from '@/api/fakeRelatedVideo'
 
 config.apiKey = process.env.LAN_1_SERP_API_KEY
 

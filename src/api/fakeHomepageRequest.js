@@ -1724,8 +1724,6 @@ const fakeHomepagePhotoRequest = {
     'https://yt3.ggpht.com/ytc/AIdro_lo158sBEwGdtmwdpI_Nh-JLCdFd67O_uHIU5scD5PmLA=s240-c-k-c0x00ffffff-no-rj',
   UCoakqm6OGfyfqzRDF25mLnA:
     'https://yt3.ggpht.com/13_r4j2kNVKn85GoJ7KpaY1SMAiTXYLT2bpqyBjOADzKXYpVcPKdtie0kW1NQcTRt6NAr2Xq=s240-c-k-c0x00ffffff-no-rj',
-  UCRf1vfEryQRWHXPXHzxb1rg:
-    'https://yt3.ggpht.com/sA11LslJS7m0RzHIjI3UVJxX4djQrLt6CI4VXAXSp0WAab9mcJAmENuuKuPYB4JpA2MzHMWBAg=s240-c-k-c0x00ffffff-no-rj',
   'UCatKTsjNl-9bukC_BHMFK4w':
     'https://yt3.ggpht.com/wtnZVsJp5D3okDGjlu0KocYsTTbkF2gclb0z0qew_AnWlBwFdf-vdxTCO1sjJhzJimAxIEhL=s240-c-k-c0x00ffffff-no-rj',
   UCcpOGZgb54_q_fTsrVM8uJw:

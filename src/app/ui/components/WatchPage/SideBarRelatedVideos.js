@@ -1,4 +1,4 @@
-import SidebarRelatedItem from './SideBarRelatedItem'
+import SidebarRelatedItem from '@/app/ui/components/WatchPage/SideBarRelatedItem'
 import formatView from '@/app/utils/formatView'
 import { getRelatedVideo } from '@/api/serpapiConfig'
 

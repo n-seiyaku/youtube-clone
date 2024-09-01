@@ -1,7 +1,7 @@
 'use client'
 
-import { AngleDown, DislikeFilled, DislikeOutlined, LikeFilled, LikeOutlined } from '../../icons'
-import { ProgressBarLink, useProgressBar } from '../ProgressBar'
+import { AngleDown, DislikeFilled, DislikeOutlined, LikeFilled, LikeOutlined } from '@/app/ui/icons'
+import { ProgressBarLink, useProgressBar } from '@/app/ui/components/ProgressBar'
 import { handleRatingVideo, handleSubcribeChannel } from '@/app/libs/actions'
 
 import Image from 'next/image'

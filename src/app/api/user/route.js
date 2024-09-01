@@ -1,6 +1,6 @@
 import getAbsolutePathInAppFolder from '@/app/utils/getAbsolutePathInAppFolder'
 import { google } from 'googleapis'
-import { oauth2Client } from '../login/route'
+import { oauth2Client } from '@/app/api/login/route'
 import parseCookies from '@/app/utils/parseCookies'
 import readFile from '@/app/utils/readFile'
 

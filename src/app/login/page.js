@@ -2,7 +2,7 @@
 
 import { useContext, useEffect } from 'react'
 
-import { AuthContext } from '../AuthProvider'
+import { AuthContext } from '@/app/AuthProvider'
 import { useRouter } from 'next/navigation'
 
 export default function LoginPage({ searchParams }) {

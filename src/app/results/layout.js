@@ -1,4 +1,4 @@
-import SideNav from '../ui/components/SideNav/SideNav'
+import SideNav from '@/app/ui/components/SideNav/SideNav'
 
 const Layout = ({ children }) => {
   return (

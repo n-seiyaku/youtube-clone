@@ -1,4 +1,4 @@
-import getHomePage from './getHomePage'
+import getHomePage from '@/api/getHomePage'
 
 const getResultPage = async () => {
   const resultPage = await getHomePage()

@@ -1,5 +1,5 @@
-import HomePageItem from './HomePageItem'
-import { ItemsSkeleton } from '../../skeletons'
+import HomePageItem from '@/app/ui/components/HomePage/HomePageItem'
+import { ItemsSkeleton } from '@/app/ui/skeletons'
 import { Suspense } from 'react'
 import getHomePage from '@/api/getHomePage'
 

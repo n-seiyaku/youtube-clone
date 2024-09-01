@@ -1,7 +1,7 @@
 'use client'
 
-import { NotificationOutlined, SignOut, ThreeDots, UserIcon } from '../../icons'
-import { ProgressBarLink, useProgressBar } from '../ProgressBar'
+import { NotificationOutlined, SignOut, ThreeDots, UserIcon } from '@/app/ui/icons'
+import { ProgressBarLink, useProgressBar } from '@/app/ui/components/ProgressBar'
 import { startTransition, useContext, useEffect, useRef, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 

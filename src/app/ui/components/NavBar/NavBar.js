@@ -1,8 +1,8 @@
-import { Microphone, ThreeBars, YoutubeLogo } from '../../icons'
+import { Microphone, ThreeBars, YoutubeLogo } from '@/app/ui/icons'
 
-import NavBarLoginButton from './NavBarLoginButton'
+import NavBarLoginButton from '@/app/ui/components/NavBar/NavBarLoginButton'
 import NavBarSearchForm from '@/app/ui/components/NavBar/NavBarSearchForm'
-import { ProgressBarLink } from '../ProgressBar'
+import { ProgressBarLink } from '@/app/ui/components/ProgressBar'
 
 const NavBar = async () => {
   return (

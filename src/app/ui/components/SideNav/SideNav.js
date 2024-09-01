@@ -11,9 +11,9 @@ import {
   SubscriptionsOutlined,
   YouFilled,
   YouOutlined,
-} from '../../icons'
+} from '@/app/ui/icons'
 
-import { ProgressBarLink } from '../ProgressBar'
+import { ProgressBarLink } from '@/app/ui/components/ProgressBar'
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 

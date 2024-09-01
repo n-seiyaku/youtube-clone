@@ -3,8 +3,8 @@
 import { startTransition, useEffect, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { SearchIcon } from '../../icons'
-import { useProgressBar } from '../ProgressBar'
+import { SearchIcon } from '@/app/ui/icons'
+import { useProgressBar } from '@/app/ui/components/ProgressBar'
 
 const NavBarSearchForm = () => {
   const path = usePathname()

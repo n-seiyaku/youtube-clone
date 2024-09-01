@@ -1,4 +1,4 @@
-import checkIsSubcribe from './checkIsSubcribe'
+import checkIsSubcribe from '@/api/checkIsSubcribe'
 import formatView from '@/app/utils/formatView'
 import getChannelPhotosAndCustomUrls from '@/api/getChannelPhotosAndCustomUrls'
 import getSubcriberCount from '@/api/getSubcriberCount'

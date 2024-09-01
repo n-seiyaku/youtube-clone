@@ -1,10 +1,10 @@
-import Description from '../ui/components/WatchPage/Description'
-import SidebarRelatedVideos from '../ui/components/WatchPage/SideBarRelatedVideos'
-import TitleVideo from '../ui/components/WatchPage/TitleVideo'
+import Description from '@/app/ui/components/WatchPage/Description'
+import SidebarRelatedVideos from '@/app/ui/components/WatchPage/SideBarRelatedVideos'
+import TitleVideo from '@/app/ui/components/WatchPage/TitleVideo'
 import dynamic from 'next/dynamic'
 import getWatchPage from '@/api/getWatchPage'
 
-const PlayerNoSSR = dynamic(() => import('../ui/components/WatchPage/YoutubePlayer'), { ssr: false })
+const PlayerNoSSR = dynamic(() => import('@/app/ui/components/WatchPage/YoutubePlayer'), { ssr: false })
 const Page = async ({ searchParams }) => {
   const videoId = searchParams.v
   const watchPageData = await getWatchPage(videoId)

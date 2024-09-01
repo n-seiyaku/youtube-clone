@@ -1,6 +1,6 @@
 import HomePageWrapper from '@/app/ui/components/HomePage/HomePage'
-import { ItemsSkeleton } from './ui/skeletons'
-import SideNav from './ui/components/SideNav/SideNav'
+import { ItemsSkeleton } from '@/app/ui/skeletons'
+import SideNav from '@/app/ui/components/SideNav/SideNav'
 import { Suspense } from 'react'
 
 const Home = () => {
