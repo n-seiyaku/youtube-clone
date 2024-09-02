@@ -6,6 +6,7 @@ const readFile = (absolutePath) => {
     return text
   } catch (error) {
     console.log('File not found!')
+    return Response.json({ error: error })
   }
 }
 
