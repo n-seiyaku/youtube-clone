@@ -5,12 +5,7 @@ const readFile = (absolutePath) => {
     const text = readFileSync(absolutePath, 'utf8')
     return text
   } catch (error) {
-    if (error.code === 'ENOENT') {
-      console.log('File not found!')
-      return error.code
-    } else {
-      throw error
-    }
+    console.log('File not found!')
   }
 }
 
